@@ -1,23 +1,23 @@
 ---
-author: "Your Name"
+author: "Jesus Rodriguez"
 date: "2023-04-18"
 title: "Project Dataset and Topics"
 output: html
 categories: project
 ---
 
-[Link to dataset]()
+[Link to dataset](https://github.com/rfordatascience/tidytuesday/tree/master/data/2019/2019-06-04)
 
 Things you plan to investigate using this dataset:
 
-- Thing 1
-- Thing 2
-- Thing 3
+- Plot showing average rating of ramen from all countries
+- How popular some flavors are, ie: cheese, miso, instant ramen, tonkotsu
+- Graphs of most and least rated brands
 
 Stat 251 topics you plan to cover during the analysis:
 
-1. Topic 1
-2. Topic 2
-3. Topic 3
-4. Topic 4
+1. Graphics
+2. String detecting, filtering, manipulation
+3. Data Manipulation
+4. Data Reshaping
 
