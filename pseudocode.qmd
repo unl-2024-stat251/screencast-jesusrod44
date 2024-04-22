@@ -1,8 +1,42 @@
 ---
-author: "Your Name"
+author: "Jesus Rodriguez"
 date: "2023-04-20"
 title: "Screencast Pseudocode"
 output: html
 categories: project
 ---
 
+-   Plot showing average rating of ramen from all countries
+
+    My goal is to get to something like this
+
+    ![](images/worldmaptemplate.jpg)
+
+    It will be black and white probably and instead of pie charts I would be putting down 1-5 stars depending on the ratings.
+
+I plan to use code like mean(ramen_ratings\[Brand == Azami\] to get the average
+
+When making markings on the map, I may try to round up or down the average rating so I don't have to get too technical with half or quarter stars.
+
+```{r}
+#Some code that gives me a base for the world map I can tweak to match what I'd like
+library(tidyverse)
+# create data for world coordinates using
+# map_data() function
+world_coordinates <- map_data("world")
+# create world map using ggplot() function
+ggplot() + geom_map( 
+    data = world_coordinates, map = world_coordinates, 
+    aes(long, lat, map_id = region) 
+  )
+```
+
+-   How popular some flavors are, ie: cheese, miso, instant ramen, tonkotsu
+
+I'd use some functions like str_detect(variety, "cheese") and filter to get the flavors I'd like, I'll save this in a new variable. I'll find the mean of the ratings with mean(stars) and then use join have all my variables be put in one dataframe
+
+I will have to use mutate(brand = reorder(brand, ratings) to get things flowing from greatest to least on the plot how I want it.
+
+-   Graphs of most and least rated brands
+
+This one is simple. I will use ggplot() and facet_wrap() to make plots of each brand and their ratings.
