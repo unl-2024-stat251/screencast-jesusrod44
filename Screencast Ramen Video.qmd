@@ -5,6 +5,40 @@ format: html
 editor: visual
 ---
 
+## Link To Youtube Screencast
+
+<https://youtu.be/pn6putf4HHc>
+
+## Time Index
+
+Datasets containing the Top 10 Best and Worst Average Rated Brands: 1:40
+
+Data Cleaning: 4:00
+
+Joining Tables: 16:00
+
+Graphics: 11:00, fix at 20:00
+
+How popular some flavors are, ie: cheese, miso, instant ramen, tonkotsu: 25:00
+
+String Manipulation and some Data Cleaning : 26:30
+
+Reshaping Data: 35:00
+
+Graphics: 50:00
+
+Average Rating of Ramen in Different Countries Around the World: 57:00
+
+Graphics Problems: 1:03:00
+
+Data Manipulation: 1:08:00
+
+Graphics cont. 1:11:30
+
+Finding Problem with USA/United States: 11:22:30
+
+Final World Map Fix: 1:40:00
+
 ## Data
 
 ```{r}
@@ -31,6 +65,7 @@ length(unique(ramen_ratings$brand))
 
 
 ```
+
 ```{r}
 
 #Datasets containing the Top 10 Best and Worst Average Rated Brands
@@ -58,8 +93,6 @@ low_brands <- left_join(low_brands, ramen_ratings)
 
 
 ```
-
-
 
 ```{r}
 library(ggplot2)
@@ -165,7 +198,6 @@ ggplot(countries, aes(x = long, y = lat, group = group)) +
   geom_polygon(color = "black", fill = "white") + theme_map() + 
   geom_polygon(data = c, aes(fill = avg_stars)) + scale_fill_gradient_tableau("Blue-Green Sequential") + labs(title = "Average Rating of Ramen in Different Countries Around the World")
 
-?scale_fill_gradient_tableau
 
 c10 <- c %>%
   filter(total_reviews >=10)
@@ -176,4 +208,3 @@ ggplot(countries, aes(x = long, y = lat, group = group)) +
 
 
 ```
-
