@@ -5,9 +5,7 @@ format: html
 editor: visual
 ---
 
-## Link To Youtube Screencast
-
-<https://youtu.be/pn6putf4HHc>
+## [Link To Youtube Screencast](https://youtu.be/pn6putf4HHc)
 
 ## Time Index
 
